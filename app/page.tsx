@@ -173,7 +173,6 @@ export default function Page() {
                 {CURRENCIES.map(c => (<option key={c} value={c}>{c}</option>))}
               </select>
             </div>
-            <button onClick={() => window.print()} className="rounded-2xl px-4 py-2 border bg-white shadow-soft text-sm">Save Page as PDF</button>
             <button onClick={reset} className="rounded-2xl px-4 py-2 border bg-white shadow-soft text-sm">Reset</button>
           </div>
         </div>
