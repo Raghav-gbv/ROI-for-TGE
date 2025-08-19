@@ -282,7 +282,14 @@ export default function Page() {
           </p>
         </Card>
 
-        <iframe aria-label='Full ROI Report Download' frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.eu/thegreyelephantohg/form/FullROIReportDownload/formperma/NiJVXGC8f9VDeFUd-Lf6wYBaiElw55DcptijJ1YG4Nc'></iframe>
+      <iframe
+  title="Full ROI Report Download"
+  src="https://forms.zohopublic.eu/thegreyelephantohg/form/FullROIReportDownload/formperma/NiJVXGC8f9VDeFUd-Lf6wYBaiElw55DcptijJ1YG4Nc"
+  className="w-full rounded-2xl border"
+  style={{ height: 500, width: '99%', border: 'none' }}
+  allow="clipboard-write"
+/>
+
 
         {/* Modal */}
         {leadOpen && (
