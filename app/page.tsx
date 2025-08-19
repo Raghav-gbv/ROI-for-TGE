@@ -282,16 +282,7 @@ export default function Page() {
           </p>
         </Card>
 
-        {/* CTA - gated */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 bg-white border rounded-2xl p-5 shadow-soft">
-          <div>
-            <div className="text-lg font-semibold">Get your Detailed PDF Report</div>
-            <div className="text-slate-600 text-sm">Enter your details to download a branded report with inputs & calculations you can share internally.</div>
-          </div>
-          <button className="rounded-2xl px-4 py-2 bg-sky-500 text-white shadow-soft" onClick={()=>setLeadOpen(true)}>
-            Get Full ROI Report
-          </button>
-        </div>
+        <iframe aria-label='Full ROI Report Download' frameborder="0" style="height:500px;width:99%;border:none;" src='https://forms.zohopublic.eu/thegreyelephantohg/form/FullROIReportDownload/formperma/NiJVXGC8f9VDeFUd-Lf6wYBaiElw55DcptijJ1YG4Nc'></iframe>
 
         {/* Modal */}
         {leadOpen && (
