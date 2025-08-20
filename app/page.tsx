@@ -96,10 +96,12 @@ export default function Page() {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       if (params.get('download') === '1') {
+      setLeadOpen(false);          // close the popup
+      setTimeout(() => {
         generatePDF();
         // clean up URL so it doesn’t stay with ?download=1
         window.history.replaceState({}, '', window.location.pathname);
-      }
+      }, 400);                     // small delay to ensure UI is painted
     }
   }, []);
   
