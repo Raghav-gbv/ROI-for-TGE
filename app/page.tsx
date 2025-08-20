@@ -91,6 +91,18 @@ export default function Page() {
     setAnnualLicense(18000);
   };
 
+  // auto-download PDF after Zoho redirect
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('download') === '1') {
+        generatePDF();
+        // clean up URL so it doesn’t stay with ?download=1
+        window.history.replaceState({}, '', window.location.pathname);
+      }
+    }
+  }, []);
+  
   // PDF generator (kept for future auto-download after Zoho redirect)
   async function generatePDF() {
     if (!pdfRef.current) return;
