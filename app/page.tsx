@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useMemo, useRef, useState, useEffect } from 'react';
 
 type CurrencyCode = 'USD' | 'EUR' | 'AED' | 'GBP' | 'SAR' | 'INR';
 
